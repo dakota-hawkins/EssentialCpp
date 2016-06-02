@@ -59,6 +59,15 @@ const vector<int>* square_seq(int size);
  *  Square sequence of length 'size'.
  */
 
+const vector<int>* pentagonal_seq(int size);
+/* square_seq() :
+ *  Function that returns a Pentagonal sequence of desired length.
+ * Paramters :
+ *  size: integer denoting desire size of Pentagonal sequence.
+ * Return :
+ *  Pentagonal sequence of length 'size'.
+ */
+
 void displayVector(vector<int> vec);
 /* displayVector:
  *  Function to print vector to screen. Displays 10 values per line.
