@@ -1,55 +1,49 @@
 //
-//  Exercise2-2.cpp
+//  Pentagonal.cpp
 //  Working
 //
-//  Created by Hawkins, Dakota Y on 5/25/16.
+//  Created by Hawkins, Dakota Y on 6/2/16.
 //  Copyright © 2016 Hawkins, Dakota Y. All rights reserved.
 //
 
 #include "Exercise2-2.hpp"
+#include <vector>
 #include <iostream>
+#include <string>
 using namespace std;
-bool fibon_elem(int pos, int &elem);
-/* fibon_elem:
- *  Function that returns desired element of the Fibonacci sequence.
- * Parameters:
- *  pos: Position of interest in Fibonacci sequence.
- * return:
- *  Returns Fibonacci value of interest.
- */
 
-int main() {
-  bool run = true;
-  char again;
-  int position, elem;
-  while (run) {
-    cout << "Please enter a position: ";
-    cin >> position;
-    if (fibon_elem(position, elem)) {
-      cout << "Element number " << position << ": " << elem << '\n';
+const vector<int>* pentagonal_sequence(int size) {
+  static vector<int> pentagonal_elements;
+  
+  if (size < 0 || size > 120) {
+    cerr << "Internal error pentagonal_sequence(): improper sequence size requested.";
+  }
+  for (int i = pentagonal_elements.size(); i < size; i++) {
+    int n = i + 1;
+    pentagonal_elements.push_back((n*(3*n - 1)/2));
+  }
+  return &pentagonal_elements;
+}
+
+template <typename elementType>
+void display_vector(vector<elementType> sequence_vector, string sequence_type) {
+  cout << sequence_type << " Sequence of size " << sequence_vector.size() << ":\n";
+  for (int i = 0; i < sequence_vector.size(); i++) {
+    if (i == 0) {
+      cout << sequence_vector[i] << " ";
     } else {
-      cout << "Sorry, could not calculate element number " << position << ".\n";
-    }
-    cout << "Calculate another position in the Fibonacci sequence? ";
-    cin >> again;
-    if (again != 'y' || again != 'Y') {
-      run = false;
+      cout << sequence_vector[i] << (!(i % 5) ? '\n' : ' ');
     }
   }
+  cout << '\n';
+}
+
+int main() {
+  display_vector((*pentagonal_sequence(3)), "Pentagonal");
+  display_vector((*pentagonal_sequence(10)), "Pentagonal");
+  display_vector((*pentagonal_sequence(23)), "Pentagonal");
+  display_vector((*pentagonal_sequence(50)), "Pentagonal");
   return 0;
 }
 
-bool fibon_elem(int pos, int &elem) {
-  if (pos <= 0 || pos > 121) {
-    elem = 0;
-    return false;
-  }
-  int n1 = 1, n2 = 1;
-  elem = 1;
-  for (int i = 3; i <= pos; ++i) {
-    elem = n2 + n1;
-    n1 = n2;
-    n2 = elem;
-  }
-  return true;
-}
+
