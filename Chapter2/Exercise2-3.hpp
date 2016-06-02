@@ -10,5 +10,25 @@
 #define Exercise2_3_hpp
 
 #include <stdio.h>
+#include <vector>
+#include <iostream>
+#include <string>
+using namespace std;
+
+const vector<int>* pentagonal_sequence(int size);
+
+template <typename elementType>
+void display_vector(vector<elementType> &sequence_vector, string sequence_type);
+
+inline bool size_check(int position);
+inline bool size_check(int position) {
+  if (position < 0 || position > 120) {
+    return false;
+  }
+  return true;
+}
+
+int pentagonal_number(int value);
+
 
 #endif /* Exercise2_3_hpp */
