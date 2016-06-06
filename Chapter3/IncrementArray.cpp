@@ -1,6 +1,6 @@
 #include "IncrementArray.hpp"
 
-template <typename element> element* find_value(const element *array, int size, const element &value) {
+template <typename element> element* find_address(element *array, int size, element &value) {
   if (! array || size < 1) {
     return 0;
   }
@@ -13,12 +13,10 @@ template <typename element> element* find_value(const element *array, int size, 
 }
 
 int main() {
-  cout << "Hell, Hal.\n";
+  cout << "Hello, Hal.\n";
   string string_array[9] = {"hey", "hey", "you", "you", "I", "Don't", "Like", "Your", "Girlfriend"};
-  const vector<string> avril(string_array, string_array + 9);
-  const string who = "Girlfriend";
-  int integer_array[1] = {10};
-  cout << "Address: " << find_value(&(integer_array[0]), 1, 10); 
-  //cout << "I don't like your Girlfriend. I know her address: " << find_value(&(avril[0]), 9, who);
+  vector<string> avril(string_array, string_array + 9);
+  string who = "Girlfriend";
+  cout << "I don't like your Girlfriend. I know her address: " << find_address(&(avril[0]), 9, who);
   return 0;
 }
