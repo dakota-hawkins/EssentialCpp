@@ -1,0 +1,6 @@
+I don't know what I'm looking for here.
+But here is an example text file. I think the solution
+he posted was overly complicated and not specified in the directions.
+I really think I should look into a new text book. I don't know how much
+longer I'm going to keep this text going, but hopefully it's long enough to
+get a legitimate example to run.
