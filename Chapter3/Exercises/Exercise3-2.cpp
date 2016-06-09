@@ -19,6 +19,7 @@ void display_container(ContainerIterator first, ContainerIterator last) {
     cout << *first;
     cout << (count % 10 ? " " : "\n");
   }
+  cout << endl;
 }
 
 
