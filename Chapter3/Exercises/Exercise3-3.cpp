@@ -55,10 +55,30 @@ void display_name_map(const map< string, vector<string> > &name_map) {
 
 }
 
+void query_name_map(const map< string, vector<string> > &name_map, const string &query) {
+  map< string, vector<string> >:: const_iterator map_end = name_map.end();
+  map< string, vector<string> >:: const_iterator query_position;
+  query_position = name_map.find(query);
+  if (query_position != map_end) {
+    cout << "Found " << query_position -> first << "!" << endl;
+    cout << query_position -> second.size() << " children: " << endl;
+    vector<string>::const_iterator vector_begin = query_position -> second.begin();
+    vector<string>::const_iterator vector_end = query_position -> second.end();
+    for ( ; vector_begin != vector_end; ++vector_begin) {
+      cout << (*vector_begin) << ", ";
+    }
+    cout << endl;
+  } else {
+    cout << "Family name " << query << " not found.";
+  }
+}
+
 int main() {
   ifstream name_file("Families2.txt");
   map< string, vector<string> > name_map;
   fill_name_map(name_file, name_map);
   display_name_map(name_map);
+  query_name_map(name_map, string("Stark"));
+  query_name_map(name_map, string("Jesus"));
   return 0;
 }

@@ -33,4 +33,15 @@ void display_name_map(const map< string, vector<string> > &name_map);
 // Output:
 //  void
 
+void query_name_map(const map< string, vector<string> > &name_map, string &queery);
+// querry_name_map
+//  Function that queeries a name map for the associated family name.
+//
+// Parameters:
+//  name_map: a map of string keys with a vector of strings as the associated value.
+//  queery: key to look for in parameter name_map.
+//
+// Return Value:
+//  void
+
 #endif /* Exercise3-2_hpp */
