@@ -17,8 +17,10 @@ int main() {
   string string_array[9] = {"hey", "hey", "you", "you", "I", "Don't", "Like", "Your", "Girlfriend"};
   const vector<string> avril(string_array, string_array + 9);
   const string who = "Girlfriend";
-  int integer_array[1] = {10};
-  cout << "Address: " << find_value(&(integer_array[0]), 1, 10); 
+  const int integer_array[1] = {10};
+  const int * pointer = &(integer_array[0]);
+  const int value = 10;
+  cout << "Address: " << find_value(pointer, 1, value);
   //cout << "I don't like your Girlfriend. I know her address: " << find_value(&(avril[0]), 9, who);
   return 0;
 }

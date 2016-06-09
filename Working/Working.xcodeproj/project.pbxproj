@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DB64DFE1D024E2A0057A6F9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DB64DFD1D024E2A0057A6F9 /* main.cpp */; };
+		1DE592E91D02A8C20066D614 /* IncrementArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DE592E71D02A8C20066D614 /* IncrementArray.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,11 @@
 
 /* Begin PBXFileReference section */
 		1DB64DFA1D024E2A0057A6F9 /* Working */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Working; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DB64DFD1D024E2A0057A6F9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1DB64E041D024E500057A6F9 /* Chapter1 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Chapter1; path = ../Chapter1; sourceTree = "<group>"; };
+		1DB64E051D024E500057A6F9 /* Chapter2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Chapter2; path = ../Chapter2; sourceTree = "<group>"; };
+		1DB64E061D024E500057A6F9 /* Chapter3 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Chapter3; path = ../Chapter3; sourceTree = "<group>"; };
+		1DE592E71D02A8C20066D614 /* IncrementArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IncrementArray.cpp; path = ../../Chapter3/IncrementArray.cpp; sourceTree = "<group>"; };
+		1DE592E81D02A8C20066D614 /* IncrementArray.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IncrementArray.hpp; path = ../../Chapter3/IncrementArray.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,9 @@
 			children = (
 				1DB64DFC1D024E2A0057A6F9 /* Working */,
 				1DB64DFB1D024E2A0057A6F9 /* Products */,
+				1DB64E041D024E500057A6F9 /* Chapter1 */,
+				1DB64E051D024E500057A6F9 /* Chapter2 */,
+				1DB64E061D024E500057A6F9 /* Chapter3 */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,7 +64,8 @@
 		1DB64DFC1D024E2A0057A6F9 /* Working */ = {
 			isa = PBXGroup;
 			children = (
-				1DB64DFD1D024E2A0057A6F9 /* main.cpp */,
+				1DE592E71D02A8C20066D614 /* IncrementArray.cpp */,
+				1DE592E81D02A8C20066D614 /* IncrementArray.hpp */,
 			);
 			path = Working;
 			sourceTree = "<group>";
@@ -118,7 +126,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DB64DFE1D024E2A0057A6F9 /* main.cpp in Sources */,
+				1DE592E91D02A8C20066D614 /* IncrementArray.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +243,7 @@
 				1DB64E031D024E2A0057A6F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
