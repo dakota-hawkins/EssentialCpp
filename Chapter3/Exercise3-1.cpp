@@ -1,4 +1,4 @@
-#include "Exercise3-1.hpp"
+#include "Exercise3-2.hpp"
 
 map<string, int> create_count_map(const set<string> &exclusion_set, ifstream &input_file) {
   map<string, int> word_map;
