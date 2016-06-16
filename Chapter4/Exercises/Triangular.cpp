@@ -41,6 +41,14 @@ Triangular& Triangular::copy(const Triangular &rhs) {
   return *this;
 }
 
+int Triangular::beginning_position() const {
+  return _beginning_position;
+}
+
+int Triangular::get_length() const {
+  return _length;
+}
+
 // Static Member functions
 
 bool Triangular::is_element(int value) {
@@ -87,4 +95,13 @@ void Triangular::generate_elements_to_value(int value) {
     cerr << "Triangular Sequence: value too large " << value << " exceeds max"
     << " size of " << _max_elements << endl;
   }
+}
+
+// Non Member functions
+
+ostream& operator << (ostream &os, const Triangular &rhs);
+ostream& operator << (ostream &os, const Triangular &rhs) {
+  os << "(" << rhs.beginning_position() << ", " << rhs.get_length() << ") ";
+  rhs.display(rhs.get_length(), rhs.beginning_position(), os);
+  return os;
 }

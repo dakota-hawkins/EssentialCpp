@@ -1,7 +1,5 @@
-#include "Triangular.hpp"
-using namespace std; 
-
 class Triangular_iterator {
+  friend class Triangular;
 public:
   Triangular_iterator(int index) : _index(index - 1){}
   //inline bool operator == (const Triangular_iterator&) const;
